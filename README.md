@@ -21,7 +21,7 @@ rasterize(svgNode)
 
 Save with FileSaver
 ```TS
-import saveSvg from './dist/saveSvg'
+import saveSvg from 'rasterize-svg'
 
 const svgNode = document.querySelector('#mySVG');
 saveSvg(svgNode, 'mySVG.png')

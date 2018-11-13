@@ -1,0 +1,29 @@
+{
+  "name": "rasterize-svg",
+  "version": "1.0.0",
+  "description": "Create rasterized images from SVG nodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmkroeker/rasterize-svg.git"
+  },
+  "keywords": [
+    "raster",
+    "svg",
+    "dom",
+    "save",
+    "image"
+  ],
+  "author": "Peter Kroeker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmkroeker/rasterize-svg/issues"
+  },
+  "homepage": "https://github.com/pmkroeker/rasterize-svg#readme",
+  "dependencies": {
+    "file-saver": "^2.0.0-rc.4"
+  }
+}

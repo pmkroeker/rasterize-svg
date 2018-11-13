@@ -14,10 +14,10 @@ export function rasterize(svg) {
     image.onerror = reject;
     image.onload = () => {
         const rect = svg.getBoundingClientRect();
-        const context = d3.create('canvas')
-            .attr('height', rect.height)
-            .attr('width', rect.width)
-            .node().getContext('2d');
+        const canvas = document.createElement('canvas');
+        canvas.height = rect.height;
+        canvas.width = rect.width;
+        const context = canvas.getContext('2d');
         context.fillStyle = 'white';
         context.fillRect(0, 0, rect.width, rect.height);
         context.drawImage(image, 0, 0, rect.width, rect.height);

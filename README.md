@@ -8,11 +8,25 @@ I needed an easy way to download SVG images created in [D3](https://d3js.org/) a
 ## Methods
 
 rasterize - Promise
+
 Usage Example:
 ```JS
+import {rasterize} from './dist/rasterize.js'
 const svgNode = d3.select('#myChart').node();
 rasterize(svgNode)
   .then((rasta) => {
     saveAs(rasta, `myChart.png`);
   });
+```
+
+Save with FileSaver
+```TS
+import saveSvg from './dist/saveSvg'
+
+const svgNode = document.querySelector('#mySVG');
+saveSvg(svgNode, 'mySVG.png')
+  .then(() => {
+    // file saved
+  });
+
 ```

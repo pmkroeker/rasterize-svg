@@ -1,32 +1,18 @@
 # rasterize-svg
 Rasterize SVG Elements for Download as PNG
 
-
 [![npm](https://img.shields.io/npm/v/rasterize-svg.svg)](https://www.npmjs.com/package/rasterize-svg)
 
 I needed an easy way to download SVG images created in [D3](https://d3js.org/) as PNG. I found that Mike Bostock made an [Observable Notebook](https://beta.observablehq.com/@mbostock/saving-svg) which solved the exact problem. the only issue was that some of the ways Observable handles DOM manipulation is not directly compatible with the browser. I modified the original code to be browser compatible.
 
-**Below example also uses [FileSaver.js](https://github.com/eligrey/FileSaver.js) to save the blob, but it should be compatible with any blob saving library or implementation**
-
 ## Methods
 
-rasterize - Promise
+rasterize-svg exports a default function which returns a promise once the file has been saved.
 
-Usage Example:
-```JS
-import {rasterize} from './dist/rasterize.js'
-const svgNode = d3.select('#myChart').node();
-rasterize(svgNode)
-  .then((rasta) => {
-    saveAs(rasta, `myChart.png`);
-  });
-```
-
-Save with FileSaver
 ```TS
 import saveSvg from 'rasterize-svg'
 
-const svgNode = document.querySelector('#mySVG');
+const svgNode = document.querySelector('#mySVG') as SVGElement;
 saveSvg(svgNode, 'mySVG.png')
   .then(() => {
     // file saved

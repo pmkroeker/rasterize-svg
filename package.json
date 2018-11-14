@@ -25,5 +25,9 @@
   "homepage": "https://github.com/pmkroeker/rasterize-svg#readme",
   "dependencies": {
     "file-saver": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   }
 }
